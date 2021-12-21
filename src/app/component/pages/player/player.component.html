@@ -1,0 +1,28 @@
+<mat-drawer-container>
+  <mat-drawer-content class="playerPage">
+    <button mat-flat-button color="primary" class="playerDelete" (click)="openDeletePlayerModal()">Удалить</button>
+  </mat-drawer-content>
+  <mat-drawer-content class="playerPage">
+      <mat-card class="playerPersonalInfo">
+          <mat-icon aria-hidden="false" class="playerEdit" (click)="openEditPlayerModal()">edit</mat-icon>
+          <mat-card-title-group>
+            <mat-card-title>{{player?.nickname}}</mat-card-title>
+            <mat-card-subtitle>Возраст: {{player?.age}} </mat-card-subtitle>
+          </mat-card-title-group>
+          <mat-card-content>
+            <p>Телефон: {{player?.phone}}</p>
+            <p>Email: {{player?.email}}</p>
+            <p>Платформа: {{player?.platform}}</p>
+          </mat-card-content>
+      </mat-card>        
+      <mat-card class="playerGamesInfo">
+          <mat-icon aria-hidden="false" class="gameAdd" (click)="openAddGameModal()">add</mat-icon>
+          <mat-card-title-group *ngIf="games.length > 0; else gamesPlayer">
+            <mat-card-title *ngFor="let game of games">{{game.name}}</mat-card-title>
+          </mat-card-title-group>
+          <ng-template #gamesPlayer>
+            <mat-card-title>У игрока нет игр</mat-card-title>
+          </ng-template>
+      </mat-card>
+  </mat-drawer-content>
+</mat-drawer-container>

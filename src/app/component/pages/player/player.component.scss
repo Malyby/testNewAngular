@@ -1,0 +1,46 @@
+mat-drawer-container {
+    padding: 60px 0;
+    min-height: calc(100vh - 64px);
+    .playerPage {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1440px;
+        padding: 10px 40px;
+        margin: auto;
+        box-sizing: border-box;
+        .playerDelete {
+            margin-left: auto;
+        }
+        .playerEdit {
+            position: absolute;
+            right: 15px;
+            top: 20px;
+            cursor: pointer;
+        }
+        .playerPersonalInfo {
+            width: 100%;
+            max-width: 600px;
+            padding: 50px 20px;
+            box-sizing: border-box;
+            .gameListItem {
+                padding: 0;
+            }
+        }
+        .playerGamesInfo {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 450px;
+            padding: 50px 20px;
+            box-sizing: border-box;
+            .gameAdd {
+                position: absolute;
+                right: 15px;
+                top: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}

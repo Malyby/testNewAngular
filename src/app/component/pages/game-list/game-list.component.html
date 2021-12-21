@@ -1,0 +1,18 @@
+<mat-drawer-container>
+    <mat-drawer-content *ngIf="games.length; else elseBlock" class="gameListWrapper">
+        <mat-card *ngFor="let game of games">
+            <mat-card-title class="gameName">{{game.name}}</mat-card-title>
+            <mat-card-content>
+                <p>Жанр: {{game.genre}}</p>
+                <p>Дата релиза: {{game.date_release | date:'longDate' }} </p>
+                <p>Платформа: {{game.platform}}</p>
+                <p>Рейтинг: {{game.rating}}</p>
+            </mat-card-content>
+        </mat-card>
+    </mat-drawer-content>
+    <ng-template #elseBlock >
+        <div class="gameListWrapper">
+            <h1>Доступных игр нет</h1>
+        </div>
+    </ng-template>
+</mat-drawer-container>

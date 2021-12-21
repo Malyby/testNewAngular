@@ -1,0 +1,17 @@
+.navbar {
+  .menuWrapper {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 40px;
+    margin: auto;
+    box-sizing: border-box;
+    a {
+      padding: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      &.active {
+        background: rgba(0,0,0,.2);
+      }
+    }
+  }
+}

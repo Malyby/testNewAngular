@@ -1,0 +1,34 @@
+<mat-drawer-container>
+  <mat-drawer-content class="playerListStuff">
+    <button mat-flat-button color="primary" class="addPlayerButton" (click)="openCreatePlayerModal()">Добавить игрока</button>
+    <input 
+      name="search"
+      type="text"
+      class="search"
+      color="red"
+      placeholder="Поиск..."
+      (keyup)="onSearch($event)"
+    >
+  </mat-drawer-content>
+  <mat-drawer-content class="playerListWrapper" *ngIf="players.length; else playersNo">
+    <mat-card *ngFor="let player of players">
+      <mat-card-title class="playerNickName">{{player.nickname}}</mat-card-title>
+      <mat-card-content>
+        <p>Возраст: {{player.age}}</p>
+        <p>Телефон: {{player.phone}} </p>
+        <p>Email: {{player.email}} </p>
+        <p>Платформа: {{player.platform}}</p>
+        <button mat-flat-button color="primary" [routerLink]="['/players', player.id]">Подробнее</button>
+      </mat-card-content>
+    </mat-card>
+  </mat-drawer-content>
+  <ng-template #playersNo>
+    <mat-drawer-content class="playerListWrapper">
+      <h1>Игрок не найден</h1>
+    </mat-drawer-content>
+  </ng-template>
+
+  <mat-drawer-content *ngIf="isShowMore" class="playerListWrapper">
+    <button mat-flat-button color="primary" class="showMore" (click)="showMore()">Показать еще</button>
+  </mat-drawer-content>
+</mat-drawer-container>
