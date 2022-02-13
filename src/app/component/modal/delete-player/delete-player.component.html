@@ -1,0 +1,40 @@
+
+<form [formGroup]="form" (ngSubmit)="deletePlayer(form)">
+    <button 
+        mat-flat-button
+        color="primary"
+        class="btn-close"
+        type="button"
+        (click)="closeModal()"
+    >
+        Закрыть
+    </button>
+    <p>Введите имя <b>{{player.nickname}}</b>, чтобы удалить игрока</p>
+    <mat-form-field class="form-input" 
+        appearance="outline"
+    >
+        <mat-label>Имя</mat-label>
+        <input
+            matInput
+            name="nickname"
+            type="text"
+            formControlName="nickname"
+        >
+        <mat-error *ngIf="form.get('nickname').invalid && form.get('nickname').touched">
+            <span *ngIf="form.get('nickname').errors.required">
+                Поле email не может быть пустым
+            </span>
+            <span *ngIf="form.get('nickname').errors.equalNickname.isValid">
+                {{form.get('nickname').errors.equalNickname.message}}
+            </span>
+        </mat-error>
+    </mat-form-field>
+    <button
+        mat-flat-button
+        color="primary"
+        type="submit"
+        [disabled]="form.invalid || form.pending"
+    >
+        Удалить
+    </button>
+</form>

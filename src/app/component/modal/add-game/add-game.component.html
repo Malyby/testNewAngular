@@ -1,0 +1,34 @@
+<form [formGroup]="form" (ngSubmit)="addGame(form)">
+    <button 
+        mat-flat-button
+        color="primary"
+        class="btn-close"
+        type="button"
+        (click)="closeModal()"
+    >
+        Закрыть
+    </button>
+    <mat-form-field class="form-input">
+        
+        <mat-label>Выберите игру</mat-label>
+        <mat-select 
+            matNativeControl 
+            formControlName="game"
+        >
+            <mat-option *ngFor="let game of games" [value]="game.id">{{game.name}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.get('game').touched">
+            <span *ngIf="form.get('game').errors?.required">
+                Поле платформа обязательна
+            </span>
+        </mat-error>
+    </mat-form-field>
+    <button
+        mat-flat-button
+        color="primary"
+        type="submit"
+        [disabled]="form.invalid || form.pending"
+    >
+        Добавить
+    </button>
+</form>

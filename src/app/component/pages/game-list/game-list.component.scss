@@ -1,0 +1,27 @@
+mat-drawer-container {
+    padding: 60px 0;
+    min-height: calc(100vh - 64px);
+    .gameListWrapper {
+        max-width: 1440px;
+        width: 100%;
+        margin: auto;
+        padding: 0 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 20px;
+        box-sizing: border-box;
+        @media (max-width: 760px) {
+            padding: 0 20px;
+        }
+        .gameName {
+            margin-bottom: 15px;
+        }
+        h1 {
+            text-align: center;
+        }
+        mat-card {
+            max-width: 300px;
+        }
+    }
+}
+

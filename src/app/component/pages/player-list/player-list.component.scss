@@ -1,0 +1,65 @@
+mat-drawer-container {
+    padding-bottom: 60px;
+    min-height: calc(100vh - 64px);
+    .playerListStuff {
+        max-width: 1440px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        padding: 0 40px;
+        box-sizing: border-box;
+        @media (max-width: 760px) {
+            padding: 20px;
+            flex-direction: column-reverse;
+            height: auto;
+        }
+        .search {
+            width: 100%;
+            max-width: 400px;
+            padding: 0 15px;
+            border: none;
+        
+            font-size: 18px;
+            line-height: 40px;
+            border-radius: 4px;
+            outline: none;
+            box-sizing: border-box;
+            @media (max-width: 760px) {
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+        .addPlayerButton {
+            height: 40px;
+            @media (max-width: 760px) {
+                width: 100%;
+            }
+        }
+    }
+    .playerListWrapper {
+        width: 100%;
+        max-width: 1440px;
+        padding: 0 40px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 20px;
+        box-sizing: border-box;
+        .playerNickName {
+            margin-bottom: 15px;
+        }
+        .showMore {
+            margin: 20px auto;
+        }
+        @media (max-width: 760px) {
+            padding: 0 20px;
+        }
+        mat-card {
+            max-width: 300px;
+        }
+    }
+}
+

@@ -1,0 +1,116 @@
+<form [formGroup]="form" (ngSubmit)="createPlayer(form)">
+    <button 
+        mat-flat-button
+        color="primary"
+        class="btn-close"
+        type="button"
+        (click)="closeModal()"
+    >
+        Закрыть
+    </button>
+    <mat-form-field class="form-input" appearance="outline">
+        <mat-label>Имя</mat-label>
+        <input
+            matInput
+            name="nickname"
+            type="text"
+            formControlName="nickname"
+        >
+        <mat-error *ngIf="form.get('nickname').invalid && form.get('nickname').touched">
+            <span *ngIf="form.get('nickname').errors.required">
+                Поле имя не может быть пустым
+            </span>
+            <span *ngIf="form.get('nickname').errors.pattern">
+                Поле имя может содержать только латинские буквы, цифры и знак подчеркивания
+            </span>
+            <span *ngIf="form.get('nickname').errors.minlength">
+                Поле имя может содежрать {{form.get('nickname').errors.minlength.requiredLength}} и более символов
+            </span>
+            <span *ngIf="form.get('nickname').errors.uniqName">
+                Это имя уже занято
+            </span>
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field class="form-input" appearance="outline">
+        <mat-label>Возраст</mat-label>
+        <input
+            matInput
+            name="age"
+            type="text"
+            formControlName="age"
+        >
+        <mat-error *ngIf="form.get('age').invalid && form.get('age').touched">
+            <span *ngIf="form.get('age').errors.required">
+                Поле возраст не может быть пустым
+            </span>
+            <span *ngIf="form.get('age').errors.pattern">
+                Поле возраст может содержать значения от 0 до 99
+            </span>
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field class="form-input" appearance="outline">
+        <mat-label>Телефон</mat-label>
+        <input
+            matInput
+            name="phone"
+            type="text"
+            formControlName="phone"
+        >
+        <mat-error *ngIf="form.get('phone').invalid && form.get('phone').touched">
+            <span *ngIf="form.get('phone').errors.required">
+                Поле телефон не может быть пустым
+            </span>
+            <span *ngIf="form.get('phone').errors.pattern">
+                Введите корректный телефон
+            </span>
+            <span *ngIf="form.get('phone').errors.uniqPhone">
+                Это телефон уже занят
+            </span>
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field class="form-input" 
+        appearance="outline"
+    >
+        <mat-label>Email</mat-label>
+        <input
+            matInput
+            name="email"
+            type="text"
+            formControlName="email"
+        >
+        <mat-error *ngIf="form.get('email').invalid && form.get('email').touched">
+            <span *ngIf="form.get('email').errors.required">
+                Поле email не может быть пустым
+            </span>
+            <span *ngIf="form.get('email').errors.email">
+                Введите корректный email
+            </span>
+            <span *ngIf="form.get('email').errors.uniqEmail">
+                Это имя уже занято
+            </span>
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field class="form-input">
+        
+        <mat-label>Выберите платформу</mat-label>
+        <mat-select 
+            matNativeControl 
+            formControlName="platform"
+        >
+            <mat-option *ngFor="let platform of platforms" [value]="platform">{{platform}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.get('platform').invalid && form.get('platform').touched">
+            <span *ngIf="form.get('platform').errors.required">
+                Поле платформа обязательна
+            </span>
+        </mat-error>
+    </mat-form-field>
+    <button
+        mat-flat-button
+        color="primary"
+        type="submit"
+        [disabled]="form.invalid || form.pending"
+    >
+        Добавить
+    </button>
+</form>

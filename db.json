@@ -1,0 +1,236 @@
+{
+  "players": [
+    {
+      "nickname": "Malyby2",
+      "age": 10,
+      "phone": "+72999939299",
+      "email": "m3a3@ma3.ru",
+      "platform": "PS",
+      "games_id": [
+        2
+      ],
+      "id": 2
+    },
+    {
+      "nickname": "Malyby3",
+      "age": 10,
+      "phone": "+73999999999",
+      "email": "ma@ma23333.ru",
+      "platform": "Nintendo Switch",
+      "games_id": [
+        3
+      ],
+      "id": 3
+    },
+    {
+      "id": 5,
+      "nickname": "Malyby5",
+      "age": 30,
+      "phone": "+75999999999",
+      "email": "ma@ma5.ru",
+      "platform": "PS",
+      "games_id": [
+        2
+      ]
+    },
+    {
+      "id": 7,
+      "nickname": "Malyby7",
+      "age": 18,
+      "phone": "+77999999999",
+      "email": "ma@ma7.ru",
+      "platform": "Xbox",
+      "games_id": [
+        4,
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "nickname": "Misha2",
+      "age": 15,
+      "phone": "+79990001122",
+      "email": "misha@test.ru",
+      "platform": "Xbox",
+      "games_id": [
+        6
+      ]
+    },
+    {
+      "id": 9,
+      "nickname": "Lenya",
+      "age": 23,
+      "phone": "+79765775857",
+      "email": "lenya@test.ru",
+      "platform": "Xbox",
+      "games_id": [
+        4
+      ]
+    },
+    {
+      "id": 10,
+      "nickname": "Anton",
+      "age": 32,
+      "phone": "+74854958677",
+      "email": "anton@tets.ru",
+      "platform": "Nintendo Switch",
+      "games_id": [
+        3
+      ]
+    },
+    {
+      "nickname": "Senya",
+      "age": 19,
+      "phone": "+79486686868",
+      "email": "senya@test.ru",
+      "platform": "PS",
+      "games_id": [],
+      "id": 11
+    },
+    {
+      "nickname": "Malyby",
+      "age": 32,
+      "phone": "+79999999999",
+      "email": "test@test.ru",
+      "platform": "PS",
+      "games_id": [],
+      "id": 12
+    },
+    {
+      "nickname": "Max",
+      "age": 19,
+      "phone": "+79998887766",
+      "email": "max@test.ru",
+      "platform": "Xbox",
+      "games_id": [],
+      "id": 14
+    },
+    {
+      "nickname": "Venya",
+      "age": 32,
+      "phone": "+79993338844",
+      "email": "venya@test.ru",
+      "platform": "PC",
+      "games_id": [],
+      "id": 15
+    },
+    {
+      "nickname": "Olya",
+      "age": 32,
+      "phone": "+79998887700",
+      "email": "olya@test.ru",
+      "platform": "PC",
+      "games_id": [],
+      "id": 16
+    },
+    {
+      "nickname": "vasya",
+      "age": 13,
+      "phone": "+79995554466",
+      "email": "vasya@test.ru",
+      "platform": "Nintendo Switch",
+      "games_id": [],
+      "id": 17
+    },
+    {
+      "nickname": "Serega",
+      "age": 25,
+      "phone": "+78949488558",
+      "email": "serega@test.ru",
+      "platform": "PS",
+      "games_id": [],
+      "id": 18
+    },
+    {
+      "nickname": "Valera",
+      "age": 22,
+      "phone": "+79847757767",
+      "email": "valera@test.ru",
+      "platform": "PC",
+      "games_id": [],
+      "id": 19
+    }
+  ],
+  "games": [
+    {
+      "id": 1,
+      "name": "Игра 1",
+      "genre": "жанр 1",
+      "date_release": "1286647200000",
+      "platform": "PC",
+      "rating": "EC"
+    },
+    {
+      "id": 2,
+      "name": "Игра 2",
+      "genre": "жанр 2",
+      "date_release": "1336759200000",
+      "platform": "PS",
+      "rating": "E"
+    },
+    {
+      "id": 3,
+      "name": "Игра 3",
+      "genre": "жанр 3",
+      "date_release": "1039028400000",
+      "platform": "Nintendo Switch",
+      "rating": "E10+"
+    },
+    {
+      "id": 4,
+      "name": "Игра 4",
+      "genre": "жанр 2",
+      "date_release": "1426878000000",
+      "platform": "Xbox",
+      "rating": "M"
+    },
+    {
+      "id": 5,
+      "name": "Игра 5",
+      "genre": "жанр 3",
+      "date_release": "1502996400000",
+      "platform": "PC",
+      "rating": "AO"
+    },
+    {
+      "id": 6,
+      "name": "Игра 6",
+      "genre": "жанр 4",
+      "date_release": "1546974000000",
+      "platform": "Xbox",
+      "rating": "T"
+    },
+    {
+      "id": 7,
+      "name": "Игра 7",
+      "genre": "жанр 1",
+      "date_release": "1631127600000",
+      "platform": "PC",
+      "rating": "AO"
+    },
+    {
+      "id": 8,
+      "name": "Игра 8",
+      "genre": "жанр 3",
+      "date_release": "1229454000000",
+      "platform": "PS",
+      "rating": "EC"
+    },
+    {
+      "id": 9,
+      "name": "Игра 9",
+      "genre": "жанр 4",
+      "date_release": "1175536800000",
+      "platform": "PC",
+      "rating": "M"
+    },
+    {
+      "id": 10,
+      "name": "Игра 10",
+      "genre": "жанр 2",
+      "date_release": "1275069600000",
+      "platform": "PC",
+      "rating": "T"
+    }
+  ]
+}
